@@ -1,0 +1,70 @@
+# =====================
+# Python
+# =====================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# =====================
+# Virtual environments
+# =====================
+venv/
+.env/
+.env.*
+.venv/
+
+# =====================
+# Jupyter
+# =====================
+.ipynb_checkpoints/
+
+# =====================
+# Data 
+# =====================
+data/raw/
+data/processed/
+data/simulated/
+*.csv
+*.parquet
+*.feather
+
+# =====================
+# Model artifacts
+# =====================
+models/
+checkpoints/
+*.pkl
+*.joblib
+*.h5
+*.pt
+
+# =====================
+# Logs
+# =====================
+logs/
+*.log
+
+# =====================
+# OS & IDE junk
+# =====================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =====================
+# Docker
+# =====================
+*.tar
+
+# =====================
+# Secrets
+# =====================
+*.key
+*.pem
+secrets/
