@@ -1,0 +1,495 @@
+id:
+  dtype: string
+  description: A unique LC assigned ID for the loan listing.
+member_id:
+  dtype: string
+  description: A unique LC assigned Id for the borrower member.
+loan_amnt:
+  dtype: float32
+  description: The listed amount of the loan applied for by the borrower. If at some
+    point in time, the credit department reduces the loan amount, then it will be
+    reflected in this value.
+funded_amnt:
+  dtype: float32
+  description: The total amount committed to that loan at that point in time.
+funded_amnt_inv:
+  dtype: float32
+  description: The total amount committed by investors for that loan at that point
+    in time.
+term:
+  dtype: int
+  description: The number of payments on the loan. Values are in months and can be
+    either 36 or 60.
+int_rate:
+  dtype: float32
+  description: Interest Rate on the loan
+installment:
+  dtype: float32
+  description: The monthly payment owed by the borrower if the loan originates.
+grade:
+  dtype: category
+  description: LC assigned loan grade
+sub_grade:
+  dtype: category
+  description: LC assigned loan subgrade
+emp_title:
+  dtype: string
+  description: The job title supplied by the Borrower when applying for the loan.*
+emp_length:
+  dtype: int
+  description: 'Employment length in years. Possible values are between 0 and 10 where
+    0 means less than one year and 10 means ten or more years. '
+home_ownership:
+  dtype: category
+  description: "The home ownership status provided by the borrower during registration\_\
+    or obtained from the credit report.\_Our values are: RENT, OWN, MORTGAGE, OTHER"
+annual_inc:
+  dtype: float32
+  description: The self-reported annual income provided by the borrower during registration.
+verification_status:
+  dtype: category
+  description: Indicates if income was verified by LC, not verified, or if the income
+    source was verified
+issue_d:
+  dtype: datetime64[ns]
+  description: The month which the loan was funded
+loan_status:
+  dtype: category
+  description: Current status of the loan
+pymnt_plan:
+  dtype: category
+  description: Indicates if a payment plan has been put in place for the loan
+url:
+  dtype: string
+  description: URL for the LC page with listing data.
+desc:
+  dtype: string
+  description: Loan description provided by the borrower
+purpose:
+  dtype: category
+  description: 'A category provided by the borrower for the loan request. '
+title:
+  dtype: string
+  description: The loan title provided by the borrower
+zip_code:
+  dtype: category
+  description: The first 3 numbers of the zip code provided by the borrower in the
+    loan application.
+addr_state:
+  dtype: category
+  description: The state provided by the borrower in the loan application
+dti:
+  dtype: float32
+  description: "A ratio calculated using the borrower\x92s total monthly debt payments\
+    \ on the total debt obligations, excluding mortgage and the requested LC loan,\
+    \ divided by the borrower\x92s self-reported monthly income."
+delinq_2yrs:
+  dtype: float32
+  description: The number of 30+ days past-due incidences of delinquency in the borrower's
+    credit file for the past 2 years
+earliest_cr_line:
+  dtype: datetime64[ns]
+  description: The month the borrower's earliest reported credit line was opened
+fico_range_low:
+  dtype: float32
+  description: "The lower boundary range the borrower\x92s FICO at loan origination\
+    \ belongs to."
+fico_range_high:
+  dtype: float32
+  description: "The upper boundary range the borrower\x92s FICO at loan origination\
+    \ belongs to."
+inq_last_6mths:
+  dtype: float32
+  description: The number of inquiries in past 6 months (excluding auto and mortgage
+    inquiries)
+mths_since_last_delinq:
+  dtype: float32
+  description: The number of months since the borrower's last delinquency.
+mths_since_last_record:
+  dtype: float32
+  description: The number of months since the last public record.
+open_acc:
+  dtype: float32
+  description: The number of open credit lines in the borrower's credit file.
+pub_rec:
+  dtype: float32
+  description: Number of derogatory public records
+revol_bal:
+  dtype: float32
+  description: Total credit revolving balance
+revol_util:
+  dtype: float32
+  description: Revolving line utilization rate, or the amount of credit the borrower
+    is using relative to all available revolving credit.
+total_acc:
+  dtype: float32
+  description: The total number of credit lines currently in the borrower's credit
+    file
+initial_list_status:
+  dtype: category
+  description: "The initial listing status of the loan. Possible values are \x96 W,\
+    \ F"
+out_prncp:
+  dtype: float32
+  description: Remaining outstanding principal for total amount funded
+out_prncp_inv:
+  dtype: float32
+  description: Remaining outstanding principal for portion of total amount funded
+    by investors
+total_pymnt:
+  dtype: float64
+  description: Payments received to date for total amount funded
+total_pymnt_inv:
+  dtype: float64
+  description: Payments received to date for portion of total amount funded by investors
+total_rec_prncp:
+  dtype: float32
+  description: Principal received to date
+total_rec_int:
+  dtype: float32
+  description: Interest received to date
+total_rec_late_fee:
+  dtype: float32
+  description: Late fees received to date
+recoveries:
+  dtype: float32
+  description: post charge off gross recovery
+collection_recovery_fee:
+  dtype: float32
+  description: post charge off collection fee
+last_pymnt_d:
+  dtype: datetime64[ns]
+  description: Last month payment was received
+last_pymnt_amnt:
+  dtype: float32
+  description: Last total payment amount received
+next_pymnt_d:
+  dtype: datetime64[ns]
+  description: Next scheduled payment date
+last_credit_pull_d:
+  dtype: datetime64[ns]
+  description: The most recent month LC pulled credit for this loan
+last_fico_range_high:
+  dtype: float32
+  description: "The upper boundary range the borrower\x92s last FICO pulled belongs\
+    \ to."
+last_fico_range_low:
+  dtype: float32
+  description: "The lower boundary range the borrower\x92s last FICO pulled belongs\
+    \ to."
+collections_12_mths_ex_med:
+  dtype: float32
+  description: Number of collections in 12 months excluding medical collections
+mths_since_last_major_derog:
+  dtype: float32
+  description: Months since most recent 90-day or worse rating
+policy_code:
+  dtype: category
+  description: 'publicly available policy_code=1
+
+    new products not publicly available policy_code=2'
+application_type:
+  dtype: category
+  description: Indicates whether the loan is an individual application or a joint
+    application with two co-borrowers
+annual_inc_joint:
+  dtype: float32
+  description: The combined self-reported annual income provided by the co-borrowers
+    during registration
+dti_joint:
+  dtype: float32
+  description: A ratio calculated using the co-borrowers' total monthly payments on
+    the total debt obligations, excluding mortgages and the requested LC loan, divided
+    by the co-borrowers' combined self-reported monthly income
+verification_status_joint:
+  dtype: category
+  description: Indicates if the co-borrowers' joint income was verified by LC, not verified, or if the income source was verified
+acc_now_delinq:
+  dtype: float32
+  description: The number of accounts on which the borrower is now delinquent.
+tot_coll_amt:
+  dtype: float32
+  description: Total collection amounts ever owed
+tot_cur_bal:
+  dtype: float32
+  description: Total current balance of all accounts
+open_acc_6m:
+  dtype: float32
+  description: Number of open trades in last 6 months
+open_act_il:
+  dtype: float32
+  description: Number of currently active installment trades
+open_il_12m:
+  dtype: float32
+  description: Number of installment accounts opened in past 12 months
+open_il_24m:
+  dtype: float32
+  description: Number of installment accounts opened in past 24 months
+mths_since_rcnt_il:
+  dtype: float32
+  description: Months since most recent installment accounts opened
+total_bal_il:
+  dtype: float32
+  description: Total current balance of all installment accounts
+il_util:
+  dtype: float32
+  description: Ratio of total current balance to high credit/credit limit on all install
+    acct
+open_rv_12m:
+  dtype: float32
+  description: Number of revolving trades opened in past 12 months
+open_rv_24m:
+  dtype: float32
+  description: Number of revolving trades opened in past 24 months
+max_bal_bc:
+  dtype: float32
+  description: Maximum current balance owed on all revolving accounts
+all_util:
+  dtype: float32
+  description: Balance to credit limit on all trades
+total_rev_hi_lim:
+  dtype: float32
+  description: Total revolving high credit/credit limit
+inq_fi:
+  dtype: float32
+  description: Number of personal finance inquiries
+total_cu_tl:
+  dtype: float32
+  description: Number of finance trades
+inq_last_12m:
+  dtype: float32
+  description: Number of credit inquiries in past 12 months
+acc_open_past_24mths:
+  dtype: float32
+  description: Number of trades opened in past 24 months.
+avg_cur_bal:
+  dtype: float32
+  description: Average current balance of all accounts
+bc_open_to_buy:
+  dtype: float32
+  description: Total open to buy on revolving bankcards.
+bc_util:
+  dtype: float32
+  description: Ratio of total current balance to high credit/credit limit for all
+    bankcard accounts.
+chargeoff_within_12_mths:
+  dtype: float32
+  description: Number of charge-offs within 12 months
+delinq_amnt:
+  dtype: float32
+  description: The past-due amount owed for the accounts on which the borrower is
+    now delinquent.
+mo_sin_old_il_acct:
+  dtype: float32
+  description: Months since oldest bank installment account opened
+mo_sin_old_rev_tl_op:
+  dtype: float32
+  description: Months since oldest revolving account opened
+mo_sin_rcnt_rev_tl_op:
+  dtype: float32
+  description: Months since most recent revolving account opened
+mo_sin_rcnt_tl:
+  dtype: float32
+  description: Months since most recent account opened
+mort_acc:
+  dtype: float32
+  description: Number of mortgage accounts.
+mths_since_recent_bc:
+  dtype: float32
+  description: Months since most recent bankcard account opened.
+mths_since_recent_bc_dlq:
+  dtype: float32
+  description: Months since most recent bankcard delinquency
+mths_since_recent_inq:
+  dtype: float32
+  description: Months since most recent inquiry.
+mths_since_recent_revol_delinq:
+  dtype: float32
+  description: Months since most recent revolving delinquency.
+num_accts_ever_120_pd:
+  dtype: float32
+  description: Number of accounts ever 120 or more days past due
+num_actv_bc_tl:
+  dtype: float32
+  description: Number of currently active bankcard accounts
+num_actv_rev_tl:
+  dtype: float32
+  description: Number of currently active revolving trades
+num_bc_sats:
+  dtype: float32
+  description: Number of satisfactory bankcard accounts
+num_bc_tl:
+  dtype: float32
+  description: Number of bankcard accounts
+num_il_tl:
+  dtype: float32
+  description: Number of installment accounts
+num_op_rev_tl:
+  dtype: float32
+  description: Number of open revolving accounts
+num_rev_accts:
+  dtype: float32
+  description: Number of revolving accounts
+num_rev_tl_bal_gt_0:
+  dtype: float32
+  description: Number of revolving trades with balance >0
+num_sats:
+  dtype: float32
+  description: Number of satisfactory accounts
+num_tl_120dpd_2m:
+  dtype: float32
+  description: Number of accounts currently 120 days past due (updated in past 2 months)
+num_tl_30dpd:
+  dtype: float32
+  description: Number of accounts currently 30 days past due (updated in past 2 months)
+num_tl_90g_dpd_24m:
+  dtype: float32
+  description: Number of accounts 90 or more days past due in last 24 months
+num_tl_op_past_12m:
+  dtype: float32
+  description: Number of accounts opened in past 12 months
+pct_tl_nvr_dlq:
+  dtype: float32
+  description: Percent of trades never delinquent
+percent_bc_gt_75:
+  dtype: float32
+  description: Percentage of all bankcard accounts > 75% of limit.
+pub_rec_bankruptcies:
+  dtype: float32
+  description: Number of public record bankruptcies
+tax_liens:
+  dtype: float32
+  description: Number of tax liens
+tot_hi_cred_lim:
+  dtype: float32
+  description: Total high credit/credit limit
+total_bal_ex_mort:
+  dtype: float32
+  description: Total credit balance excluding mortgage
+total_bc_limit:
+  dtype: float32
+  description: Total bankcard high credit/credit limit
+total_il_high_credit_limit:
+  dtype: float32
+  description: Total installment high credit/credit limit
+revol_bal_joint:
+  dtype: float32
+  description: Sum of revolving credit balance of the co-borrowers, net of duplicate balances
+sec_app_fico_range_low:
+  dtype: float32
+  description: FICO range (high) for the secondary applicant
+sec_app_fico_range_high:
+  dtype: float32
+  description:  FICO range (low) for the secondary applicant
+sec_app_earliest_cr_line:
+  dtype: datetime64[ns]
+  description:  Earliest credit line at time of application for the secondary applicant
+sec_app_inq_last_6mths:
+  dtype: float32
+  description:  Credit inquiries in the last 6 months at time of application for the secondary applicant
+sec_app_mort_acc:
+  dtype: float32
+  description:  Number of mortgage accounts at time of application for the secondary applicant
+sec_app_open_acc:
+  dtype: float32
+  description:  Number of open trades at time of application for the secondary applicant
+sec_app_revol_util:
+  dtype: float32
+  description: Ratio of total current balance to high credit/credit limit for all revolving accounts
+sec_app_open_act_il:
+  dtype: float32
+  description: ' Number of currently active installment trades at time of application
+    for the secondary applicant'
+sec_app_num_rev_accts:
+  dtype: float32
+  description:  Number of revolving accounts at time of application for the secondary applicant
+sec_app_chargeoff_within_12_mths:
+  dtype: float32
+  description: Number of charge-offs within last 12 months at time of application for the secondary applicant
+sec_app_collections_12_mths_ex_med:
+  dtype: float32
+  description: Number of collections within last 12 months excluding medical collections at time of application for the secondary applicant
+sec_app_mths_since_last_major_derog:
+  dtype: float32
+  description:  Months since most recent 90-day or worse rating at time of application for the secondary applicant
+hardship_flag:
+  dtype: category
+  description: Flags whether or not the borrower is on a hardship plan
+hardship_type:
+  dtype: category
+  description: Describes the hardship plan offering
+hardship_reason:
+  dtype: category
+  description: Describes the reason the hardship plan was offered
+hardship_status:
+  dtype: category
+  description: Describes if the hardship plan is active, pending, canceled, completed,
+    or broken
+deferral_term:
+  dtype: float32
+  description: Amount of months that the borrower is expected to pay less than the
+    contractual monthly payment amount due to a hardship plan
+hardship_amount:
+  dtype: float32
+  description: The interest payment that the borrower has committed to make each month
+    while they are on a hardship plan
+hardship_start_date:
+  dtype: datetime64[ns]
+  description: The start date of the hardship plan period
+hardship_end_date:
+  dtype: datetime64[ns]
+  description: The end date of the hardship plan period
+payment_plan_start_date:
+  dtype: datetime64[ns]
+  description: The day the first hardship plan payment is due. For example, if a borrower
+    has a hardship plan period of 3 months, the start date is the start of the three-month
+    period in which the borrower is allowed to make interest-only payments.
+hardship_length:
+  dtype: float32
+  description: The number of months the borrower will make smaller payments than normally
+    obligated due to a hardship plan
+hardship_dpd:
+  dtype: float32
+  description: Account days past due as of the hardship plan start date
+hardship_loan_status:
+  dtype: category
+  description: Loan Status as of the hardship plan start date
+orig_projected_additional_accrued_interest:
+  dtype: float32
+  description: The original projected additional interest amount that will accrue
+    for the given hardship payment plan as of the Hardship Start Date. This field
+    will be null if the borrower has broken their hardship payment plan.
+hardship_payoff_balance_amount:
+  dtype: float32
+  description: The payoff balance amount as of the hardship plan start date
+hardship_last_payment_amount:
+  dtype: float32
+  description: The last payment amount as of the hardship plan start date
+disbursement_method:
+  dtype: category
+  description: 'The method by which the borrower receives their loan. Possible values
+    are: CASH, DIRECT_PAY'
+debt_settlement_flag:
+  dtype: category
+  description: Flags whether or not the borrower, who has charged-off, is working
+    with a debt-settlement company.
+debt_settlement_flag_date:
+  dtype: datetime64[ns]
+  description: "The most recent date that the Debt_Settlement_Flag has been set\_\_"
+settlement_status:
+  dtype: category
+  description: "The status of the borrower\x92s settlement plan. Possible values are:\
+    \ COMPLETE, ACTIVE, BROKEN, CANCELLED, DENIED, DRAFT"
+settlement_date:
+  dtype: datetime64[ns]
+  description: The date that the borrower agrees to the settlement plan
+settlement_amount:
+  dtype: float32
+  description: The loan amount that the borrower has agreed to settle for
+settlement_percentage:
+  dtype: float32
+  description: The settlement amount as a percentage of the payoff balance amount
+    on the loan
+settlement_term:
+  dtype: float32
+  description: The number of months that the borrower will be on the settlement plan

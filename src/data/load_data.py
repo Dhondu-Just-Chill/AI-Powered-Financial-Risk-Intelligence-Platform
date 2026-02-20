@@ -1,5 +1,6 @@
 from pathlib import Path
 import pandas as pd
+from data.parquet_maker import parquet_maker
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
@@ -19,7 +20,8 @@ def load_raw_data(file_name: str) -> pd.DataFrame:
     if not file_path.exists():
         raise FileNotFoundError(f"File {file_name} not found in {file_path}")
     
-    data = pd.read_csv(file_path)
+    data = parquet
+    
     return data
 
 def list_raw_data_files() -> list:
