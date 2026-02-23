@@ -19,7 +19,7 @@ def load_raw_data(file_name: str) -> pd.DataFrame:
     if not file_path.exists():
         raise FileNotFoundError(f"File {file_name} not found in {file_path}")
     
-    data = parquet
+    data = pd.read_parquet(file_path)
     
     return data
 
