@@ -1,6 +1,5 @@
 from pathlib import Path
 import pandas as pd
-from data.parquet_maker import parquet_maker
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
