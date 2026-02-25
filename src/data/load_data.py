@@ -3,9 +3,9 @@ import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
-RAW_DATA_PATH = PROJECT_ROOT / "data" / "raw" 
+RAW_DATA_PATH = PROJECT_ROOT / "data" 
 
-def load_raw_data(file_name: str) -> pd.DataFrame:
+def load_data(file_name: str, raw_or_processed: str) -> pd.DataFrame:
     """
     Load raw data from a CSV file.
 
@@ -15,7 +15,7 @@ def load_raw_data(file_name: str) -> pd.DataFrame:
     Returns:
         pd.DataFrame: The loaded data as a pandas DataFrame.
     """
-    file_path = RAW_DATA_PATH / file_name
+    file_path = RAW_DATA_PATH / raw_or_processed / file_name
     if not file_path.exists():
         raise FileNotFoundError(f"File {file_name} not found in {file_path}")
     
