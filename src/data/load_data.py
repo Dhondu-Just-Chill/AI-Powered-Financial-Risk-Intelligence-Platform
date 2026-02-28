@@ -7,10 +7,11 @@ RAW_DATA_PATH = PROJECT_ROOT / "data"
 
 def load_data(file_name: str, raw_or_processed: str) -> pd.DataFrame:
     """
-    Load raw data from a CSV file.
+    Load raw data from a parquet file.
 
     Args:
-        file_name (str): The name of the CSV file to load.
+        file_name (str): The name of the parquet file to load.
+        raw_or_processed (str): The path of the parquet file to load.
         
     Returns:
         pd.DataFrame: The loaded data as a pandas DataFrame.
